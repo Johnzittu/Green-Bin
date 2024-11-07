@@ -1,0 +1,549 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(/assets/background.jpg);
+    background-size: cover;
+}
+
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+/* Header */
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 25vw; /* Usando vw para tornar a largura da logo responsiva */
+    max-width: 219px; /* Limita a largura máxima */
+    margin-right: 66px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #27362B;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #1DB937;
+}
+
+.descubra-btn {
+    background: linear-gradient(135deg, #1DE552, #E3B92B); /* Gradiente de verde para amarelo */
+    color: #054F3F;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.descubra-btn:hover {
+    background: linear-gradient(135deg, #0DB937, #D49B1F); /* Gradiente mais escuro para o hover */
+}
+
+
+/* destaque Section */
+#destaque {
+    width: 100%;
+    max-width: 1120px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+/* Destaque Texto */
+#destaque .destaque-texto {
+    display: inline-block; /* Faz o fundo se ajustar ao tamanho do conteúdo */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px; /* Padding interno */
+    gap: 20px; /* Espaçamento entre os itens internos */
+    width: 620px; /* Largura fixa */
+    height: 330px; /* Altura fixa */
+    background: rgba(176, 234, 192, 0.8); /* Cor de fundo com opacidade */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-sizing: border-box; /* Inclui o padding nas dimensões */
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+#destaque h1 {
+    font-size: 2.2em;  /* Tamanho reduzido do título */
+    line-height: 1.2;  /* Ajuste no espaçamento das linhas */
+    letter-spacing: 1px;  /* Espaçamento entre as letras */
+    text-transform: uppercase;  /* Título em maiúsculas */
+    color: #27362B;
+    margin-bottom: 20px;
+}
+
+#destaque p {
+    font-size: 1.1em;  /* Tamanho reduzido do parágrafo */
+    line-height: 1.5;  /* Ajuste no espaçamento das linhas */
+    letter-spacing: 0.5px;  /* Espaçamento entre as letras */
+    color: #27362B;
+    margin-bottom: 20px;
+}
+
+#destaque .cta-btn {
+    background: #ffffff; /* Cor de fundo do botão */
+    color: #054F3F; /* Cor do texto do botão */
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#destaque .cta-btn:hover {
+    background-color: #1DB937; /* Cor de fundo no hover */
+}
+
+/* Destaque Imagens */
+.destaque-images {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 30px;
+}
+
+.imagem-lixeira {
+    width: 40vw;
+    max-width: 244px;
+    height: auto;
+    z-index: 2;
+    margin-top: -20px;
+}
+
+.imagem-sustentabilidade {
+    width: 40vw;
+    max-width: 244px;
+    height: auto;
+    position: absolute;
+    top: 30px;
+    left: 30%;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+    #destaque {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #destaque .destaque-texto {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .destaque-images {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagem-lixeira,
+    .imagem-sustentabilidade {
+        width: 80%;
+        max-width: 244px;
+    }
+}
+
+/* Seção sobre */
+
+#sobre {
+    margin-top: 200px;
+}
+
+/* Estilos principais da seção */
+#sobre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    /* background: rgba(255, 255, 255, 0.45); */
+    border-radius: 5px;
+    padding: 40px 20px;
+    gap: 20px;
+    margin-bottom: 340px;
+}
+
+/* Conteúdo do "Sobre" */
+#sobre-conteudo {
+    flex: 1;
+    min-width: 280px;
+    max-width: 520px;
+    text-align: left;
+    padding-right: 20px;
+}
+
+#sobre-conteudo h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#sobre-conteudo p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #27362B;
+}
+
+/* Estilos para os "recursos" */
+.recursos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Define duas colunas */
+    gap: 20px; /* Espaço entre os cards */
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
+}
+
+.recurso {
+    /* background-color: #89DF98; */
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+}
+
+.recurso img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.recurso h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: fredoka, sans-serif;
+}
+        
+.recurso p {
+    font-size: 16px;
+    text-align: left;
+    margin-left: 50px;
+    width: 220px;
+    color: #27362B;
+    
+}
+
+#atualizacao-card {
+    background-color: #FFF;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 619px; /* Ajuste do tamanho do card */
+    text-align: left;
+    margin-top: -200px;
+    margin-left: auto; /* Alinha o card à direita */
+    height: 377px;
+}
+
+/* Título e conteúdo do card */
+#atualizacao-card h3 {
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#atualizacao-card h3::before {
+    content: "";
+    position: absolute;
+    top: -30px; /* Posição acima do h3 */
+    left: 0;
+    width: 57px; /* Largura do retângulo */
+    height: 6px; /* Altura do retângulo */
+    background-color: #054F3F; /* Cor verde do retângulo */
+}
+
+#atualizacao-card p {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Botão de chamada para ação */
+.cta-btn {
+    background-color: #BCEEC9;
+    color: #054F3F;
+    padding: 16px 48px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    background-color: #A2D4B2;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #atualizacao-card {
+        margin: 20px auto; /* Centraliza o card em telas menores */
+        max-width: 100%;
+    }
+}
+
+/* Seção de Dúvidas frequentes */
+
+#faq {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    max-width: 800px; /* Limite de largura */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding-bottom: 80px; /* Espaçamento inferior */
+    margin-top: 670px;
+}
+
+#faq h2 {
+    margin-top: 50px;
+    color: #054F3F;
+    font-family: fredoka, sans-serif;
+    font-size: 31px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Estilo para as perguntas e respostas */
+.faq-item {
+    background: linear-gradient(135deg, #4BC3CC, #1DE552);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Remove qualquer efeito visual no hover */
+.faq-item:hover {
+    background: linear-gradient(135deg, #4BC3CC, #1DE552);
+    color: #ffffff;
+}
+
+/* Estilo para o conteúdo expandido */
+.faq-item p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin: 0;
+    padding-top: 0;
+}
+
+.faq-item.expanded p {
+    max-height: 200px; /* Ajuste conforme o conteúdo */
+    padding-top: 10px;
+}
+
+
+
+/* Footer */
+
+/* Estilo geral do Footer */
+footer {
+    color: white;
+    padding: 40px 20px;
+    text-align: left;
+    font-family: fredoka, sans-serif;
+    position: relative;
+    margin-top: 450px;
+    padding-bottom: 90px;
+}
+
+/* Container geral do footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Coluna Esquerda */
+.footer-left {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.footer-logo {
+    width: 150px; /* Tamanho da logo */
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Coluna Direita */
+.footer-right {
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+    width: 100%;
+}
+
+/* Estilos das seções dentro da coluna direita */
+.footer-menu, .footer-social {
+    margin-bottom: 20px;
+    width: 48%; /* Ajuste para que fiquem lado a lado */
+}
+
+/* Títulos do Menu e Social */
+.footer-menu h4, .footer-social h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Layout para o Menu e Social */
+.menu-items, .social-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-items div, .social-items div {
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Para garantir que os links fiquem organizados em colunas */
+}
+
+.menu-items a, .social-items a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.menu-items a:hover, .social-items a:hover {
+    color: #E3B92B; /* Cor de hover */
+}
+
+/* Responsividade: ajustes para telas menores */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-right {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-menu, .footer-social {
+        width: 100%;
+    }
+
+    .menu-items, .social-items {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-items div, .social-items div {
+        width: 100%;
+    }
+}
+
+
+
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    header .logo img {
+        width: 40vw;
+        max-width: 150px;
+    }
+
+    #destaque {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #destaque .destaque-texto {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .destaque-images {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagem-lixeira,
+    .imagem-sustentabilidade {
+        width: 80%;
+        max-width: 244px;
+    }
+
+    /* Ajuste na seção de recursos */
+    .recursos {
+        flex-direction: column; /* Colocando os itens um abaixo do outro */
+    }
+
+    #recursos .recurso {
+        flex: 1 1 100%; /* Tornando os itens ocuparem toda a largura da tela em telas pequenas */
+    }
+}
