@@ -8,16 +8,37 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <nav>
-            <img src="/assets/logo.svg" alt="Logo Green Bin" class="logo">
-            <ul class="menu">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/html/descubra.php" class="active">Descubra</a></li>
-                <li><a href="/html/feedback.html">Feedback</a></li>
+    <header class="header">
+        <div class="logo">
+            <img src="/assets/logo.svg" alt="Logo Green Bin">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+        <div class="menu-container">
+            <!-- Ícone de Menu Hamburguer -->
+            <button class="menu-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- Submenu -->
+            <div class="submenu">
+                <a href="#opcao1">Opção 1</a>
+                <a href="#opcao2">Opção 2</a>
+                <a href="#opcao3">Opção 3</a>
+            </div>
+        </div>
+        
+        
     </header>
+    
 
     <!-- Conteúdo Principal -->
     <main>
@@ -36,5 +57,7 @@
     </footer>
 
     <script src="/js/relatorios.js"></script> <!-- Adiciona o arquivo JS que fará a requisição -->
+    <script src="/js/scripts.js"></script>
+
 </body>
 </html>

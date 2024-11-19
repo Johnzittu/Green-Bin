@@ -21,3 +21,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+//Menu hamburguer pagina descubra
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerButton = document.querySelector('.menu-hamburger'); // Botão hambúrguer
+    const submenu = document.querySelector('.submenu'); // Submenu
+
+    // Alterna o submenu e o estado do botão
+    hamburgerButton.addEventListener('click', () => {
+        submenu.classList.toggle('show'); // Mostra/oculta o submenu
+        hamburgerButton.classList.toggle('open'); // Alterna animação do hambúrguer
+    });
+
+    // Fecha o submenu ao clicar fora dele
+    document.addEventListener('click', (e) => {
+        if (!hamburgerButton.contains(e.target) && !submenu.contains(e.target)) {
+            submenu.classList.remove('show');
+            hamburgerButton.classList.remove('open');
+        }
+    });
+});
