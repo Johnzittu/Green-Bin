@@ -76,7 +76,7 @@ header nav ul li a:hover {
     background-color: #1DB937;
 }
 
-.descubra-btn {
+    .descubra-btn {
     background: linear-gradient(135deg, #1DE552, #E3B92B); /* Gradiente de verde para amarelo */
     color: #054F3F;
     padding: 10px 20px;

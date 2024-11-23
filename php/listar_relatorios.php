@@ -1,8 +1,11 @@
 <?php
 include('db.php');
 
+// Defina o tipo de conteúdo como JSON
+header('Content-Type: application/json');
+
 // Query para pegar os relatórios
-$sql = "SELECT id, titulo, conteudo, data_publicacao, link FROM relatorios ORDER BY data_publicacao DESC";
+$sql = "SELECT titulo, conteudo, data_publicacao, link FROM relatorios ORDER BY data_publicacao DESC";
 $result = $conn->query($sql);
 
 // Verifica se ocorreu um erro na consulta
@@ -29,7 +32,6 @@ if ($result->num_rows > 0) {
 }
 
 // Codifica os dados em JSON e envia de volta
-header('Content-Type: application/json');
 echo json_encode($relatorios);
 $conn->close();
 ?>

@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
 //Menu hamburguer pagina descubra
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerButton = document.querySelector('.menu-hamburger'); // Botão hambúrguer
