@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Bin - Descubra</title>
-    <link rel="stylesheet" href="/css/descubra.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Green Bin - Descubra</title>
+        <link rel="stylesheet" href="/css/descubra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="/js/scripts.js"></script>
+        <script src="/js/relatorios.js"></script> 
+        <script src="/js/graficos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
 <body>
     <!-- Header -->
     <header class="header">
@@ -42,22 +47,78 @@
 
     <!-- Conteúdo Principal -->
     <main>
+        <!-- Relatórios Dinâmicos -->
         <section class="relatorios">
             <h1>Relatórios e Sustentabilidade</h1>
             <p>Explore os relatórios mais recentes sobre reciclagem, sustentabilidade e impacto ambiental.</p>
-
-            <!-- Relatórios Dinâmicos -->
-            <div id="relatorios-container"></div> <!-- O container que o JavaScript vai preencher -->
+            <div id="relatorios-container"></div>
+        <!-- Gráficos Dinâmicos -->
+            <section id="graficos-comparativos" class="graficos-container">
+                <h2>Antes e Depois da Green Bin</h2>
+                <!-- Gráficos serão inseridos dinamicamente aqui -->
+            </section>
         </section>
     </main>
 
+    <!-- Seção de Como a Green Bin Funciona -->
+<section id="como-funciona">
+    <div class="container-como-funciona">
+      <h2>Como a Green Bin Funciona?</h2>
+      <div class="conteudo-como-funciona">
+        <i class="fas fa-trash-alt icone-lixeira"></i>
+        <p>A Green Bin é um sistema inteligente de separação de resíduos, projetado para empresas que buscam reduzir seu impacto ambiental. Ela separa automaticamente os resíduos recicláveis dos orgânicos, aumentando a taxa de reciclagem e ajudando a melhorar a gestão de resíduos em larga escala. Com a Green Bin, as empresas conseguem fazer a diferença de maneira simples e eficiente.</p>
+      </div>
+    </div>
+</section>
+  
+      
+      
+      
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Green Bin. Todos os direitos reservados.</p>
-    </footer>
+        <div class="footer-container">
+            <!-- Coluna Esquerda -->
+            <div class="footer-left">
+                <img src="/assets/logo.svg" alt="Logo" class="footer-logo"> <!-- Logo da empresa -->
+                <p>+55 (11) 91234-5678</p> <!-- Número de telefone fictício -->
+                <p>contato@greenbin.com</p> <!-- E-mail fictício -->
+            </div>
+    
+            <!-- Coluna Direita -->
+            <div class="footer-right">
+                <!-- Menu -->
+                <div class="footer-menu">
+                    <h4>Menu</h4>
+                    <div class="menu-items">
+                        <div>
+                            <a href="#">Home</a>
+                            <a href="#">Feedback</a>
+                        </div>
+                        <div>
+                            <a href="#">Sobre nós</a>
+                            <a href="#">Contato</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Redes Sociais -->
+                <div class="footer-social">
+                    <h4>Social</h4>
+                    <div class="social-items">
+                        <div>
+                            <a href="#">Github</a>
+                            <a href="#">Facebook</a>
+                        </div>
+                        <div>
+                            <a href="#">Instagram</a>
+                            <a href="#">Linkedin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>        
 
-    <script src="/js/relatorios.js"></script> <!-- Adiciona o arquivo JS que fará a requisição -->
-    <script src="/js/scripts.js"></script>
 
 </body>
 </html>

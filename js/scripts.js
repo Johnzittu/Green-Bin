@@ -41,3 +41,72 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+// Selecionando containers dos gráficos
+const graficosContainer = document.getElementById("graficos-comparativos");
+const empresasContainer = document.getElementById("lista-empresas");
+
+// Renderizando gráficos e dados
+document.addEventListener("DOMContentLoaded", () => {
+  const graficosContainer = document.getElementById("graficos-comparativos");
+
+  if (!graficosContainer) {
+    console.error("Elemento 'graficos-comparativos' não encontrado.");
+    return;
+  }
+
+  
+  empresas.forEach((empresa, index) => {
+    // Criar um canvas para o gráfico
+    const canvasId = `grafico-${index}`;
+    const graficoDiv = document.createElement("div");
+    graficoDiv.className = "grafico-empresa";
+    graficoDiv.innerHTML = `
+      <h3>${empresa.nome}</h3>
+      <p class="descricao-empresa">${empresa.descricao}</p>
+      <canvas id="${canvasId}"></canvas>
+    `;
+    graficosContainer.appendChild(graficoDiv);
+
+    // Configurar os dados do gráfico
+    const ctx = document.getElementById(canvasId).getContext("2d");
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["Reciclável", "Orgânico"],
+        datasets: [
+          {
+            label: "Antes",
+            data: [empresa.antes.reciclavel, empresa.antes.organico],
+            backgroundColor: "rgba(255, 99, 132, 0.5)",
+            borderColor: "rgba(255, 99, 132, 1)",
+            borderWidth: 1,
+          },
+          {
+            label: "Depois",
+            data: [empresa.depois.reciclavel, empresa.depois.organico],
+            backgroundColor: "rgba(54, 162, 235, 0.5)",
+            borderColor: "rgba(54, 162, 235, 1)",
+            borderWidth: 1,
+          },
+        ],
+      },
+
+      
+
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: "top" },
+          title: {
+            display: true,
+            text: "Comparativo de Resíduos",
+          },
+        },
+      },
+    });
+  });
+});
+
+
